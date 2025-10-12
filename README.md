@@ -305,9 +305,9 @@ Contributions are welcome! Please:
 
 ## 9. License
 
-- **Non-commercial use**: Licensed under the [Isuite-TTS Non-Commercial License](LICENSE.html)
+- **Non-commercial use**: Licensed under the [Isuite-TTS Non-Commercial License](LICENSE.md)
 - **Commercial use**: Contact Andrzej Mazur at: info@isuite.org for licensing details
-- **Third-party licenses**: Isuite-TTS uses third-party libraries, including Piper (MIT License). See [Third-Party Licenses](#third-party-licenses) for details.
+- **Third-party licenses**: Isuite-TTS uses third-party libraries, including Piper (MIT License). See [Third-Party Licenses](LICENSE.md) for details.
 
 ## 10. Resources
 
