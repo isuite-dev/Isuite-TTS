@@ -19,16 +19,16 @@
 - Easy installation with platform-specific scripts
 
 ## 2. Requirements
-- **Python**: Supported versions: 3.12.0 - 3.12.9 ✅ (Magic Number: 0x6d0d0d0a)
+
+- eSpeak
+- ONNX (>=1.16.0)
+- Piper-TTS
+- Pygame
+- PySide6 (>=6.0.0)
+- Python: Supported versions: 3.12.0 - 3.12.9
 > **Python 3.13 is not supported ❌ due to lack of compatible wheels for critical dependencies.**
 > Please download and install Python 3.12.x Version from:
 <p style="text-align: center;">Link: <a href="https://www.python.org/downloads/">https//www.python.org/downloads</a></p>
-
-- PySide6 (>=6.0.0)
-- Piper-TTS
-- ONNX (>=1.16.0)
-- Pygame
-- eSpeak
 
 ## Download
 **⚠️ WARNING**: The "Download ZIP" button on GitHub or the "Source code (zip/tar.gz)" files in the release contain LFS pointers instead of full ONNX models. Use the appropriate download for your OS:
