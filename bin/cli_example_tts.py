@@ -5,6 +5,7 @@
 
 import scipy.io.wavfile as wavfile
 import numpy as np
+import sys
 from pathlib import Path
 from datetime import datetime
 from isuite import AudioPlayer, TextToSpeech
@@ -13,7 +14,7 @@ import argparse
 
 def main():
     # Default Parameter
-    model_file_en = Path("tts") / "models" / "en_GB-cori-high.onnx"
+    model_file_en = Path("tts") / "models" / "en_GB-cori-medium.onnx"
     model_file_fr = Path("tts") / "models" / "fr_FR-siwis-medium.onnx"
     noise_scale = 0.667
     noise_w = 0.8
@@ -53,6 +54,15 @@ def main():
             print(f"⚠️ Countries Local '{args.language}' not supported, therefore fallback to EN.")
         else:
             print("No language specified, using English by default")
+
+    # Prüfe, ob das Modell existiert und größer als 10 MB ist (um LFS-Pointer zu erkennen)
+    if not model.exists() or model.stat().st_size < 10 * 1024 * 1024:
+        print("❌ Error: No TTS language model is installed or the model is invalid.\n"
+              "A valid TTS model must be present in the `tts/models/` directory for speech synthesis.\n"
+              "For detailed instructions, see the README section: “Integrating Optional Additional Models (ONNX)”.\n"
+              "Alternatively, please download the full ZIP from the release, which includes all TTS models.\n"
+              "https://github.com/isuite-dev/Isuite-TTS/releases/")
+        sys.exit(1)
 
     try:
         # Generiere TTS mit den definierten Parametern und Modell

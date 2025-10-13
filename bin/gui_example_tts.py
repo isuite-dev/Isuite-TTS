@@ -25,7 +25,7 @@ from isuite import GuiStyles, TextToSpeech, CountDown, CountUp, AudioPlayer, Cle
 from gui_tts import TextToSpeechWrapper
 from gui_player import AudioPlayerWrapper
 
-TIME_PER_CHAR = 0.015  # Mittelwert durch Tests ermittelt
+TIME_PER_CHAR = 0.02  # Mittelwert durch Tests ermittelt
 
 description = """
 <br><b>💡 App Description (Brief)</b><br>This example demonstrates text‑to‑speech conversion using a cross‑platform library.<br>It can be used in private, non‑commercial Python projects.
@@ -342,6 +342,18 @@ class TTSWindow(QMainWindow):
         model = self.source_dir / self.model_combo.currentText()
         # definiere WAV-Filename für TTS
         output_file = Path("audio") / "wav" / f"tts_{datetime.now().strftime('%Y%m%d_%H%M%S')}.wav"
+
+        # Check if the model exists and is larger than 10 MB (to detect LFS pointers)
+        if not model.exists() or model.stat().st_size < 10 * 1024 * 1024:
+            QMessageBox.warning(self, "No TTS Model Installed",
+                "No TTS language model is installed or the model is invalid. "
+                "A valid TTS model must be present in the `tts/models/` directory for speech synthesis. "
+                "For detailed instructions, see the README section: “Integrating Optional Additional Models (ONNX)”. "
+                "Alternatively, please download the full ZIP from the release, which includes all TTS models."
+                "https://github.com/isuite-dev/Isuite-TTS/releases/"
+            )
+            self.status_bar.showMessage("⚠️ No TTS model is installed!")
+            return
 
         # UI update
         self.status_bar.showMessage("⚙️ Generating audio. Please wait...")
