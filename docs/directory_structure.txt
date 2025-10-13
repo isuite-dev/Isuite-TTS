@@ -1,0 +1,40 @@
+isuite-tts-v0.1.0/
+├── bin/
+│   ├── cli_example_tts.py
+│   ├── gui_example_tts.py
+│   ├── gui_player.py
+│   ├── gui_tts.py
+│   └── requirements.txt
+├── docs/
+│   └── directory_structure
+├── isuite/
+│   ├── __init__.py
+│   ├── isuite_cleanup_utils.py
+│   ├── isuite_config_utils.py
+│   ├── isuite_counter.py
+│   ├── isuite_player.py
+│   ├── isuite_styles.py
+│   └── isuite_tts.py
+├── res/
+│   ├── icon.png
+│   ├── readme_audio.wav
+│   └── screenshot.png
+├── tts/
+│   └── models/
+│       ├── en_GB-cori-medium.onnx
+│       ├── en_GB-cori-medium.onnx.json
+│       ├── fr_FR-siwis-medium.onnx
+│       └── fr_FR-siwis-medium.onnx.json
+├── .gitignore
+├── installer_linux.sh
+├── installer_macos.sh
+├── installer_windows.bat
+├── LICENSE.md
+├── MANIFEST.txt
+├── post_install.py
+├── README.md
+├── run_linuxexample.sh
+├── run_macos_example.sh
+├── run_windows_example.bat
+├── run_windows_example.vbs
+└── setup.py

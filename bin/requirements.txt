@@ -1,0 +1,7 @@
+numpy
+onnxruntime
+piper-tts
+pygame
+PySide6
+scipy
+soundfile
