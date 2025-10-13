@@ -1,0 +1,4 @@
+include tts/models/*.onnx
+include tts/models/*.onnx.json
+include res/*.png
+include res/*.wav

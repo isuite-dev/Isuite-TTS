@@ -4,7 +4,7 @@
 
 **Isuite-TTS** is a modular, open-source text-to-speech (TTS) library that converts text into high-quality audio output. Powered by the **Piper** library, it supports multiple languages and is compatible with **Linux**, **macOS**, and **Windows**. The library is optimized for both **CLI** and **GUI** interfaces, offering configurable audio parameters for developers.
 
-> **Note**: Isuite-TTS is licensed for **non-commercial use** under the MIT License by default. For commercial use, refer to the [License](#7-license) section.
+> **Note**: Isuite-TTS is licensed for **non-commercial use** under the MIT License by default. For commercial use, refer to the [Isuite-TTS Non-Commercial License](LICENSE.md)
 
 > **Audio Example**: Hear Isuite-TTS in action! Listen to a sample of the README converted to audio:
 
@@ -20,14 +20,10 @@
 
 ## 2. Requirements
 - **Python**: Supported versions: 3.12.0 - 3.12.9 ✅ (Magic Number: 0x6d0d0d0a)
-> **Python 3.11 or 3.13 is not supported ❌ due to lack of compatible wheels for critical dependencies.**
+> **Python 3.13 is not supported ❌ due to lack of compatible wheels for critical dependencies.**
 > Please download and install Python 3.12.x Version from:
 <p style="text-align: center;">Link: <a href="https://www.python.org/downloads/">https//www.python.org/downloads</a></p>
-- IMPORTANT: Check "Add Python to PATH" during installation!
-  > ```bash
-  > python --version 'or' python3 --version
-  > pip --version
-  > ```
+
 - PySide6 (>=6.0.0)
 - Piper-TTS
 - ONNX (>=1.16.0)
@@ -55,6 +51,7 @@ Install the following system packages to avoid runtime errors:
 
 1. Unzip the '**tar.gz**' file
 2. Open a terminal and navigate to the program directory (Replace 'Download' name with your own):
+
    > ```bash
    > cd Downloads/isuite-tts-v0.1.0
    > ```
@@ -110,8 +107,9 @@ Install the following system packages to avoid runtime errors:
 ### Windows Installation
 
 1. Before running the installer, please install:
-   
+
    <p style="text-align: center;">Link: <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ Redistributable (x64)</a></p>
+
 2. Unzip the '**zip**' file
 3. **Option A: Automated Installation** (Recommended for beginners)
 
@@ -264,6 +262,12 @@ Adjust audio settings and model paths in the following files:
 ## 6. Troubleshooting ❓
 
 **Common Issues:**
+
+- IMPORTANT: Check "Add Python to PATH" during installation!
+  > ```bash
+  > python --version 'or' python3 --version
+  > pip --version
+  > `
 
 - **No audio output**: Ensure espeak is installed and system audio is not muted
 - **Emojis not displaying in GUI (Linux)**: Install fonts-noto-color-emoji
