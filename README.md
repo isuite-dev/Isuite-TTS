@@ -31,10 +31,8 @@
 - eSpeak
 
 ## 3.Download
-Download the full package (including ONNX models, 114.4 MiB): Isuite-TTS v0.1.0
-
-**Important**: The "Download ZIP" button on GitHub or the "Source code (zip/tar.gz)" files in the release contain LFS pointers instead of full ONNX models. Use the Isuite-TTS-v0.1.0.zip from the release above or clone with Git LFS (see Installation).
-
+**⚠️ WARNING**: Do not use the "Download ZIP" button on GitHub, as it contains LFS pointers instead of full ONNX models.
+Download the full package (114.4 MiB) from [Isuite-TTS v0.1.0](https://github.com/isuite-dev/Isuite-TTS/releases/tag/v0.1.0).
 
 ## 4. Installation
 
