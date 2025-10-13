@@ -3,8 +3,7 @@ isuite-tts-v0.1.0/
 │   ├── cli_example_tts.py
 │   ├── gui_example_tts.py
 │   ├── gui_player.py
-│   ├── gui_tts.py
-│   └── requirements.txt
+│   └── gui_tts.py
 ├── docs/
 │   └── directory_structure
 ├── isuite/
@@ -33,7 +32,8 @@ isuite-tts-v0.1.0/
 ├── MANIFEST.txt
 ├── post_install.py
 ├── README.md
-├── run_linuxexample.sh
+├── requirements.txt
+├── run_linux_example.sh
 ├── run_macos_example.sh
 ├── run_windows_example.bat
 ├── run_windows_example.vbs
