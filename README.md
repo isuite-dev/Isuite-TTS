@@ -30,9 +30,10 @@
 - Pygame
 - eSpeak
 
-## 3.Download
-**⚠️ WARNING**: Do not use the "Download ZIP" button on GitHub, as it contains LFS pointers instead of full ONNX models.
-Download the full package (114.4 MiB) from [Isuite-TTS v0.1.0](https://github.com/isuite-dev/Isuite-TTS/releases/tag/v0.1.0).
+## Download
+**⚠️ WARNING**: The "Download ZIP" button on GitHub or the "Source code (zip/tar.gz)" files in the release contain LFS pointers instead of full ONNX models. Use the appropriate download for your OS:
+- **Linux/macOS**: [isuite-tts-v0.1.0.tar.gz](https://github.com/isuite-dev/Isuite-TTS/releases/) (114.4 MiB, includes directory structure).
+- **Windows**: [isuite-ts-v0.1.0.zip](https://github.com/isuite-dev/Isuite-TTS/releases/) (114.4 MiB, flat structure for easy extraction).
 
 ## 4. Installation
 
