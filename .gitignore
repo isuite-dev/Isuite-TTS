@@ -32,7 +32,7 @@ piper_models/
 ui_*.py
 
 # Dynamically generated directories
-audio/
+audio/wav/
 bin/ai_env/
 configs/
 logs/
