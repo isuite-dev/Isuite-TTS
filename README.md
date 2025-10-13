@@ -30,11 +30,13 @@
 - Pygame
 - eSpeak
 
-## 3. Installation
-- **Linux**: Run `./installer_linux.sh`
-- **macOS**: Run `./installer_macos.sh`
-- **Windows**: Run `installer_windows.bat`
+## 3.Download
+Download the full package (including ONNX models, 114.4 MiB): Isuite-TTS v0.1.0
 
+**Important**: The "Download ZIP" button on GitHub or the "Source code (zip/tar.gz)" files in the release contain LFS pointers instead of full ONNX models. Use the Isuite-TTS-v0.1.0.zip from the release above or clone with Git LFS (see Installation).
+
+
+## 4. Installation
 
 ### Prerequisites
 
@@ -49,14 +51,39 @@ Install the following system packages to avoid runtime errors:
 
 ### Linux/macOS Installation
 
-1. Unzip the '**tar.gz**' file
-2. Open a terminal and navigate to the program directory (Replace 'Download' name with your own):
-
+1. **Option A: From Git Clone:**
+   - Install Git LFS:
    > ```bash
-   > cd Downloads/isuite-tts-v0.1.0
+   > sudo apt install git-lfs  # Linux
+   > brew install git-lfs      # macOS
+   > # Windows: Download from https://git-lfs.com
+   > git lfs install
    > ```
 
-3. **Option A: Automated Installation** (Recommended for beginners) Run our platform-specific installer script:
+   - Clone the repository:
+   > ```bash
+   > git clone https://github.com/isuite-dev/Isuite-TTS.git
+   > cd Isuite-TTS
+   > git lfs pull
+   > ```
+
+   - Install dependencies:
+   > ```bash
+   > python -m venv bin/ai_env
+   > source bin/ai_env/bin/activate  # Linux/macOS
+   > pip install -r requirements.txt
+   > pip install .
+   > python post_install.py
+   > ```
+
+
+2. **Option B: Automated Installation** From Release ZIP (Recommended for beginners) Run our platform-specific installer script:
+   - Download from Isuite-TTS v0.1.0.
+   - Unzip and navigate to the folder:
+   > ```bash
+   > unzip Isuite-TTS-v0.1.0.zip -d Isuite-TTS
+   > cd Isuite-TTS
+   > ```
 
    - **For Linux**
    > ```bash
@@ -72,12 +99,14 @@ Install the following system packages to avoid runtime errors:
 
    - **Run examples**:
    > ```bash
+   > chmod +x run_linux_example.sh
    > ./run_linux_example.sh
    > 'or'
+   > chmod +x run_macos_example.sh
    > ./run_macos_example.sh
    > ```
 
-4. **Option B: Manual Installation**
+3. **Option C: Manual Installation**
 
    - Create and activate a virtual environment:
    > ```bash
@@ -170,7 +199,7 @@ Install the following system packages to avoid runtime errors:
 3. Copy the files into: **isuite_tts/models/**
 4. The installed language model can now be used in the GUI "isuite-tts" app :-)
 
-## 4. Usage 🎯
+## 5. Usage 🎯
 
    **Basic Usage for TTS:**
 
@@ -245,7 +274,7 @@ Install the following system packages to avoid runtime errors:
 > player.stop()
 > ```
 
-## 5. Configuration ⚙️
+## 6. Configuration ⚙️
 
 Adjust audio settings and model paths in the following files:
 
@@ -259,7 +288,7 @@ Adjust audio settings and model paths in the following files:
 >  "de": "tts/models/de_DE-karlsson-low.onnx"}
 > ```
 
-## 6. Troubleshooting ❓
+## 7. Troubleshooting ❓
 
 **Common Issues:**
 
@@ -291,13 +320,13 @@ Adjust audio settings and model paths in the following files:
    > python --version
    > ```
 
-## 7. Performance Tips
+## 8. Performance Tips
 
 - Use smaller models for faster processing (lower quality)
 - Larger models provide better voice quality but take more time
 - Consider using the streaming mode for long texts
 
-## 8. Contributing
+## 9. Contributing
 
 Contributions are welcome! Please:
 
@@ -307,13 +336,13 @@ Contributions are welcome! Please:
 > 4. Push to the branch
 > 5. Open a Pull Request
 
-## 9. License
+## 10. License
 
 - **Non-commercial use**: Licensed under the [Isuite-TTS Non-Commercial License](LICENSE.md)
 - **Commercial use**: Contact Andrzej Mazur at: info@isuite.org for licensing details
 - **Third-party licenses**: Isuite-TTS uses third-party libraries, including Piper (MIT License). See [Third-Party Licenses](LICENSE.md) for details.
 
-## 10. Resources
+## 11. Resources
 
 - [GitHub Repository](https://github.com/<dein-username>/Isuite-TTS)
 - [eSpeak](https://github.com/espeak-ng/espeak-ng) - Text-to-Speech engine
