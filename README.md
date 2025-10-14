@@ -30,7 +30,7 @@
 > Please download and install Python 3.12.x Version from:
 <p style="text-align: center;">Link: <a href="https://www.python.org/downloads/">https//www.python.org/downloads</a></p>
 
-## Download
+## 3. Download
 **⚠️ WARNING**: The “Download ZIP” button on GitHub only contains the “Source code (zip/tar.gz)” with LFS pointers instead of complete ONNX models. Therefore, please use the download appropriate for your operating system:
 
 - **Linux/macOS**: [isuite-tts-v0.1.0.tar.gz](https://github.com/isuite-dev/Isuite-TTS/releases/) (114.4 MiB, includes directory structure).
