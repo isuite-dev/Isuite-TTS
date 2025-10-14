@@ -8,7 +8,7 @@
 
 > **Audio Example**: Hear Isuite-TTS in action! Listen to a sample of the README converted to audio:
 
-<p style="text-align: center;">🔊 <a href="res/readme_audio.wav">Listen to Isuite-TTS README Audio</a></p>
+<p style="text-align: center;">🔊 <a href="https://github.com/isuite-dev/Isuite-TTS/tree/main/res/readme_audio.wav">Listen to Isuite-TTS README Audio</a></p>
 
 ## 1. Features ✅
 
@@ -31,7 +31,8 @@
 <p style="text-align: center;">Link: <a href="https://www.python.org/downloads/">https//www.python.org/downloads</a></p>
 
 ## Download
-**⚠️ WARNING**: The "Download ZIP" button on GitHub or the "Source code (zip/tar.gz)" files in the release contain LFS pointers instead of full ONNX models. Use the appropriate download for your OS:
+**⚠️ WARNING**: The “Download ZIP” button on GitHub only contains the “Source code (zip/tar.gz)” with LFS pointers instead of complete ONNX models. Therefore, please use the download appropriate for your operating system:
+
 - **Linux/macOS**: [isuite-tts-v0.1.0.tar.gz](https://github.com/isuite-dev/Isuite-TTS/releases/) (114.4 MiB, includes directory structure).
 - **Windows**: [isuite-ts-v0.1.0.zip](https://github.com/isuite-dev/Isuite-TTS/releases/) (114.4 MiB, flat structure for easy extraction).
 
@@ -48,15 +49,88 @@ Install the following system packages to avoid runtime errors:
 > | **Windows** | Microsoft Visual C++ Redistributable (x64) from:                                                                      |
 > |             | Install Link: <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ Redistributable (x64)</a> |
 
-### Linux/macOS Installation
+1. **Option A: Automated Installation** From Releases 'Isuite-TTS Library' (Recommended for beginners) Run our platform-specific installer script:
 
-1. **Option A: From Git Clone:**
+   - Unzip and navigate to the folder:
+   > ```bash
+   > cd isuite-tts-v0.1.0
+   > ```
+
+   - **For Linux**
+   > ```bash
+   > chmod +x installer_linux.sh
+   > sudo ./installer_linux.sh
+   > ```
+
+   - **For macOS**
+   > ```bash
+   > chmod +x installer_macos.sh
+   > ./installer_macos.sh
+   > ```
+
+   - **Windows**
+   > ```bash
+   > installer_windows.bat
+   > ```
+
+   - **Run GUI examples**:
+   > ```bash
+   > # Linux:
+   > chmod +x run_linux_example.sh
+   > ./run_linux_example.sh
+   >
+   > # macOS:
+   > chmod +x run_macos_example.sh
+   > ./run_macos_example.sh
+   >
+   > # Windows
+   > run_windows_example.bat  # with terminal window
+   > 'or'
+   > run_windows_example.vbs  # without terminal window
+   > ```
+
+2. **Option B: Manual Installation**
+
+   - Create and activate a virtual environment:
+   > ```bash
+   > # Linux/macOS
+   > python3.12 -m venv bin/ai_env
+   > source bin/ai_env/bin/activate
+   >
+   > # Windows: for classic Windows Command Prompt (cmd.exe):
+   > python3.12 -m venv bin\ai_env
+   > bin\ai_env\Scripts\activate.bat
+   > ```
+
+   - Install the package:
+   > ```bash
+   > pip install .
+   > ```
+
+   - (Optional) Delete temporary installation files:
+   > ```bash
+   > python post_install.py
+   > ```
+
+   - **Run examples**:
+   > ```bash
+   > # Linux/macOS
+   > source bin/ai_env/bin/activate
+   >
+   > # Windows
+   > bin\ai_env\Scripts\activate.bat
+   >
+   > # For CLI Example
+   > python bin/cli_example_tts.py
+   > # For GUI Example
+   > python bin/gui_example_tts.py
+   > ```
+
+3. **Option C: From Git Clone:**
    - Install Git LFS:
    > ```bash
    > sudo apt install git-lfs  # Linux
    > brew install git-lfs      # macOS
-   > # Windows: Download from https://git-lfs.com
-   > git lfs install
    > ```
 
    - Clone the repository:
@@ -75,128 +149,14 @@ Install the following system packages to avoid runtime errors:
    > python post_install.py
    > ```
 
-
-2. **Option B: Automated Installation** From Release ZIP (Recommended for beginners) Run our platform-specific installer script:
-   - Download from Isuite-TTS v0.1.0.
-   - Unzip and navigate to the folder:
-   > ```bash
-   > unzip Isuite-TTS-v0.1.0.zip -d Isuite-TTS
-   > cd Isuite-TTS
-   > ```
-
-   - **For Linux**
-   > ```bash
-   > chmod +x installer_linux.sh
-   > sudo ./installer_linux.sh
-   > ```
-
-   - **For macOS**
-   > ```bash
-   > chmod +x installer_macos.sh
-   > ./installer_macos.sh
-   > ```
-
-   - **Run examples**:
-   > ```bash
-   > chmod +x run_linux_example.sh
-   > ./run_linux_example.sh
-   > 'or'
-   > chmod +x run_macos_example.sh
-   > ./run_macos_example.sh
-   > ```
-
-3. **Option C: Manual Installation**
-
-   - Create and activate a virtual environment:
-   > ```bash
-   > python3.12 -m venv bin/ai_env
-   > source bin/ai_env/bin/activate
-   > ```
-
-   - Install the package:
-   > ```bash
-   > pip install .
-   > ```
-
-   - (Optional) Delete temporary installation files:
-   > ```bash
-   > python post_install.py
-   > ```
-
-   - **Run examples**:
-   > ```bash
-   > source bin/ai_env/bin/activate
-   >
-   > CLI: python bin/cli_example_tts.py
-   > 'or'
-   > GUI: python bin/gui_example_tts.py
-   > ```
-
-### Windows Installation
-
-1. Before running the installer, please install:
-
-   <p style="text-align: center;">Link: <a href="https://aka.ms/vs/17/release/vc_redist.x64.exe">Microsoft Visual C++ Redistributable (x64)</a></p>
-
-2. Unzip the '**zip**' file
-3. **Option A: Automated Installation** (Recommended for beginners)
-
-    - 3.1. Double-clicking on the **installer_windows.bat** file runs the Windows installation.
-   
-    - 3.2. Run examples:
-    > ```bash
-    > run_windows_example.bat
-    > ```
-
-4. **Option B: Manual Installation** Run our Windows installation script in the ‘cmd.exe’ terminal.
-
-   - Open a terminal and navigate to the program directory (Replace 'Download' name with your own):
-   > ```bash
-   > cd Downloads\isuite-tts-v0.1.0
-   > ```
-
-   - Create and activate a virtual environment:
-   > ```bash
-   > python3.12 -m venv bin\ai_env
-   > ```
-
-   - For Windows PowerShell:
-   > ```bash
-   > bin\ai_env\Scripts\Activate.ps1
-   > ```
-
-   - For classic Windows Command Prompt (cmd.exe):
-   > ```bash
-   > bin\ai_env\Scripts\activate.bat
-   > ```
-
-   - Install the package:
-   > ```bash
-   > pip install .
-   > ```
-
-   - (Optional) Delete temporary installation files:
-   > ```bash
-   > python post_install.py
-   > ```
-
-   - **Run examples**:
-   > ```bash
-   > bin\ai_env\Scripts\activate.bat
-   >
-   > CLI: python bin\cli_example_tts.py
-   > 'or'
-   > GUI: python bin\gui_example_tts.py
-   > ```
-
 ### Optional additional models (ONNX) integration:
 
 <p style="text-align: center;">Link: <a href="https://rhasspy.github.io/piper-samples/">https://rhasspy.github.io/piper-samples/</a></p>
 
 1. Choose a language model <Language> that you like :-)
 2. Download the two files: **xxx.onnx** and **xxx.onnx.json**
-3. Copy the files into: **isuite_tts/models/**
-4. The installed language model can now be used in the GUI "isuite-tts" app :-)
+3. Copy the files into: **tts/models/**
+4. The installed language model can now be used in the GUI 'isuite-tts' app :-)
 
 ## 5. Usage 🎯
 
@@ -277,25 +237,13 @@ Install the following system packages to avoid runtime errors:
 
 Adjust audio settings and model paths in the following files:
 
-- `configs/tts_config.json`: Configure Audio parameters (sample rate, volume, pitch).
-- `configs/tts_models_config.json`: Specify paths to Piper TTS models for different languages.
-
-**Example** (`tts_models_config.json`):
-
-> ```json
-> {"en": "tts/models/en_GB-cori-high.onnx",
->  "de": "tts/models/de_DE-karlsson-low.onnx"}
-> ```
+- `configs/tts_config.json`: Configure Audio parameters.
+- `configs/tts_models_config.json`: Automatically lists available TTS models.
+- `configs/player_config.json`: Configure Audio-Player.
 
 ## 7. Troubleshooting ❓
 
 **Common Issues:**
-
-- IMPORTANT: Check "Add Python to PATH" during installation!
-  > ```bash
-  > python --version 'or' python3 --version
-  > pip --version
-  > `
 
 - **No audio output**: Ensure espeak is installed and system audio is not muted
 - **Emojis not displaying in GUI (Linux)**: Install fonts-noto-color-emoji
@@ -303,6 +251,8 @@ Adjust audio settings and model paths in the following files:
   > ```bash
   > sudo apt install fonts-noto-color-emoji
   > ```
+
+- **IMPORTANT** Check "Add Python to PATH" during installation!
 - **Permission denied errors**: Make sure to run with appropriate permissions or use virtual environments
 - **Python module import errors**: Ensure you're in the correct virtual environment
 
@@ -317,6 +267,10 @@ Adjust audio settings and model paths in the following files:
    
    > ```bash
    > python --version
+   > 'or'
+   > python3 --version
+   > 'or'
+   > pip --version
    > ```
 
 ## 8. Performance Tips
