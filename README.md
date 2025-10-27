@@ -1,5 +1,5 @@
 # Isuite-TTS: Text-to-Speech Library
-![](https://komarev.com/ghpvc/?username=isuite-dev&color=blue)
+![Python](res/python3.12.svg) ![](https://komarev.com/ghpvc/?username=isuite-dev&color=blue)
 ![Isuite-TTS GUI Screenshot](res/screenshot.png)
 
 **Isuite-TTS** is a modular, open-source text-to-speech (TTS) library that converts text into high-quality audio output. Powered by the **Piper** library, it supports multiple languages and is compatible with **Linux**, **macOS**, and **Windows**. The library is optimized for both **CLI** and **GUI** interfaces, offering configurable audio parameters for developers.
